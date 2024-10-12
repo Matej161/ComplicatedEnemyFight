@@ -1,0 +1,14 @@
+C:\Users\42060\RiderProjects\gamesa\Gamesa\bin\Debug\net8.0\Gamesa.exe
+C:\Users\42060\RiderProjects\gamesa\Gamesa\bin\Debug\net8.0\Gamesa.deps.json
+C:\Users\42060\RiderProjects\gamesa\Gamesa\bin\Debug\net8.0\Gamesa.runtimeconfig.json
+C:\Users\42060\RiderProjects\gamesa\Gamesa\bin\Debug\net8.0\Gamesa.dll
+C:\Users\42060\RiderProjects\gamesa\Gamesa\bin\Debug\net8.0\Gamesa.pdb
+C:\Users\42060\RiderProjects\gamesa\Gamesa\obj\Debug\net8.0\Gamesa.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\42060\RiderProjects\gamesa\Gamesa\obj\Debug\net8.0\Gamesa.AssemblyInfoInputs.cache
+C:\Users\42060\RiderProjects\gamesa\Gamesa\obj\Debug\net8.0\Gamesa.AssemblyInfo.cs
+C:\Users\42060\RiderProjects\gamesa\Gamesa\obj\Debug\net8.0\Gamesa.csproj.CoreCompileInputs.cache
+C:\Users\42060\RiderProjects\gamesa\Gamesa\obj\Debug\net8.0\Gamesa.dll
+C:\Users\42060\RiderProjects\gamesa\Gamesa\obj\Debug\net8.0\refint\Gamesa.dll
+C:\Users\42060\RiderProjects\gamesa\Gamesa\obj\Debug\net8.0\Gamesa.pdb
+C:\Users\42060\RiderProjects\gamesa\Gamesa\obj\Debug\net8.0\Gamesa.genruntimeconfig.cache
+C:\Users\42060\RiderProjects\gamesa\Gamesa\obj\Debug\net8.0\ref\Gamesa.dll
