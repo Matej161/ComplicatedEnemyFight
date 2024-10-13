@@ -12,3 +12,4 @@ C:\Users\42060\RiderProjects\gamesa\Gamesa\obj\Debug\net8.0\refint\Gamesa.dll
 C:\Users\42060\RiderProjects\gamesa\Gamesa\obj\Debug\net8.0\Gamesa.pdb
 C:\Users\42060\RiderProjects\gamesa\Gamesa\obj\Debug\net8.0\Gamesa.genruntimeconfig.cache
 C:\Users\42060\RiderProjects\gamesa\Gamesa\obj\Debug\net8.0\ref\Gamesa.dll
+C:\Users\42060\RiderProjects\gamesa\Gamesa\obj\Debug\net8.0\Gamesa.sourcelink.json

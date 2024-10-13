@@ -3,11 +3,25 @@
 public class Room
 {
     public string Description { get; set; }
+    public Enemy Enemy { get; private set; }
 
-    public Room(string description, Enemy enemy)    
+    public Room(string description, bool hasChest, bool hasBoss)
     {
-        description = Description;
-        enemy = enemy;
+        Description = description;
+        Enemy = GenerateEnemy();
+    }
+    
+    private Enemy GenerateEnemy()
+    {
+        Random rnd = new Random();
+        int randomEnemy = rnd.Next(0, 3); 
+
+        switch (randomEnemy)
+        {
+            case 0: return Enemy.Factory.CreateOger();
+            case 1: return Enemy.Factory.CreateGoblin();
+            default: return null; 
+        }
     }
 
     public void Explore()
@@ -17,7 +31,6 @@ public class Room
         switch (chest)
         {
            
-                
         }
 
     }
@@ -27,15 +40,19 @@ public class Room
         while (player.IsLiving && enemy.IsLiving)
         {
             Console.WriteLine(Description);
-            Console.WriteLine("1.attack  2.potions");
+            Console.WriteLine("1.fight  2.odejit");
             int battle = Convert.ToInt32(Console.ReadLine());
             switch (battle)
             {
                 case 1:
-                    player.Attack(enemy);
-                    enemy.Attack(player);
+                    while (player.IsLiving && enemy.IsLiving)
+                    {
+                        player.Attack(enemy);
+                        enemy.Attack(player);
+                    }
                     break;
-                case 2:
+                
+                /*case 2:
                     Console.WriteLine("1.Heal potions  2.Strength potions");
                     int potionChoose = Convert.ToInt32(Console.ReadLine());
                     switch (potionChoose)
@@ -78,7 +95,7 @@ public class Room
                             }
                             break;
                     }
-                    break;
+                    break;*/
             }
 
             if (enemy.Hp <= 0)

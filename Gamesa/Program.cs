@@ -7,20 +7,17 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        
-        
         Enemy oger = Enemy.Factory.CreateOger();
         Enemy goblin = Enemy.Factory.CreateGoblin();
         Player bob = Player.Factory.CreatePlayer();
         
         Random randomEnemy = new Random();
         
-        Room room1 = new Room("jeskyna", oger);
-        Room room2 = new Room("prdel", goblin);
+        Room room1 = new Room("bohate", false, false);
+        Room room2 = new Room("prdel", false, false);
         
         bob.CurrentRoom = room1;
 
-        
         Console.ForegroundColor = ConsoleColor.DarkRed;
         Console.WriteLine("********************" + "\n" + " FUCKIN ELDEN RING " + "\n" + "********************" + "\n");
         Console.ForegroundColor = ConsoleColor.White;
@@ -40,7 +37,7 @@ public class Program
         {
             case 1: 
                 bob.CurrentRoom = room1;
-                Console.WriteLine("si tady ale co ted? \n 1.explorovat 2.zmlatit vsechny");
+                Console.WriteLine("si tady ale co ted? \n 1.explorovat 2.zmlatit bluda");
                 int action = Convert.ToInt32(Console.ReadLine());
                 switch (action)
                 {
@@ -60,6 +57,7 @@ public class Program
                         break;
                     case 2: room2.StartBattle(bob, oger);
                         break;
+                    
                 }
                 break;
         }
