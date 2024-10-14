@@ -5,109 +5,129 @@ public class Room
     public string Description { get; set; }
     public Enemy Enemy { get; private set; }
 
+    public bool HasChest;
+    public bool HasBoss;
+
     public Room(string description, bool hasChest, bool hasBoss)
     {
         Description = description;
         Enemy = GenerateEnemy();
+        HasChest = hasChest;
+        HasBoss = hasBoss;
     }
-    
+
     private Enemy GenerateEnemy()
     {
         Random rnd = new Random();
-        int randomEnemy = rnd.Next(0, 3); 
+        int randomEnemy = rnd.Next(0, 2);
 
         switch (randomEnemy)
         {
             case 0: return Enemy.Factory.CreateOger();
             case 1: return Enemy.Factory.CreateGoblin();
-            default: return null; 
+        }
+
+        return null;
+    }
+
+    public void Yapping()
+    {
+        if (Enemy != null && !Enemy.IsDefeated)
+        {
+            Console.WriteLine($"V místnosti je nepřítel: {Enemy.Name}");
+        }
+        else
+        {
+            Console.WriteLine("V místnosti není žádný nepřítel.");
+        }
+
+        if (HasChest)
+        {
+            Console.WriteLine("V místnosti je truhla.");
+        }
+        else
+        {
+            Console.WriteLine("Truhla byla vyloupena");
         }
     }
 
-    public void Explore()
+    public void Explore(Player player)
     {
-        Console.WriteLine("omg to je truhla \n 1.otevrit 2.nebudu to riskovat");
-        int chest = Convert.ToInt32(Console.ReadLine());
-        switch (chest)
+        Console.WriteLine($"1.attack {Enemy.Name}  2.open truhla 3.see inventory 4.popnout potion  5.leave");
+        int playerAction = Convert.ToInt32(Console.ReadLine());
+        switch (playerAction)
         {
-           
+            case 1:
+                if (!Enemy.IsDefeated)
+                {
+                    StartBattle(player, Enemy);
+                }
+                break;
+            
+            case 2:
+                if (HasChest)
+                {
+                    Random rnd = new Random();
+                    Player.EHealPotions potion = (Player.EHealPotions)rnd.Next(0, 3);
+                    player.PlayerInventory.AddPotion(potion);
+                    HasChest = false;
+                }
+                else
+                {
+                    Console.WriteLine("uz je prazdna");
+                }
+                Explore(player);
+                break;
+            
+            case 3:
+                player.PlayerInventory.ShowPotions();
+                Explore(player);
+                break;
+            case 4:
+                player.PlayerInventory.UsePotion(player);
+                Explore(player);
+                break;
+            
+            case 5:
+                Explore(player);
+                break;
         }
 
+        Console.ReadLine();
     }
 
     public void StartBattle(Player player, Enemy enemy)
     {
         while (player.IsLiving && enemy.IsLiving)
         {
-            Console.WriteLine(Description);
-            Console.WriteLine("1.fight  2.odejit");
-            int battle = Convert.ToInt32(Console.ReadLine());
-            switch (battle)
+            player.Attack(enemy);
+
+            if (!enemy.IsLiving)
             {
-                case 1:
-                    while (player.IsLiving && enemy.IsLiving)
-                    {
-                        player.Attack(enemy);
-                        enemy.Attack(player);
-                    }
-                    break;
-                
-                /*case 2:
-                    Console.WriteLine("1.Heal potions  2.Strength potions");
-                    int potionChoose = Convert.ToInt32(Console.ReadLine());
-                    switch (potionChoose)
-                    {
-                        case 1:
-                            Console.WriteLine("1.small  2.medium  3.large");
-                            int healPotions = Convert.ToInt32(Console.ReadLine());
-                            switch (healPotions)
-                            {
-                                case 1:
-                                    player.Heal(Player.EHealPotions.naplast);
-                                    Console.WriteLine("plus 7 hp bro");
-                                    break;
-                                case 2:
-                                    player.Heal(Player.EHealPotions.bandaz);
-                                    Console.WriteLine("plus 10 hp bro");
-                                    break;
-                                case 3:
-                                    player.Heal(Player.EHealPotions.medkit);
-                                    Console.WriteLine("plus 15 hp bro");
-                                    break;
-                            }
-                            break;
-                        case 2: Console.WriteLine("1.small  2.medium  3.large");
-                            int strengthPotions = Convert.ToInt32(Console.ReadLine());
-                            switch (strengthPotions)
-                            {
-                                case 1:
-                                    player.IncreaseDamage(Player.EStrengthPotions.small);
-                                    Console.WriteLine("plus 1 dmg bro");
-                                    break;
-                                case 2:
-                                    player.IncreaseDamage(Player.EStrengthPotions.medium);
-                                    Console.WriteLine("plus 3 dmg bro");
-                                    break;
-                                case 3:
-                                    player.IncreaseDamage(Player.EStrengthPotions.large);
-                                    Console.WriteLine("plus 5 dmg bro");
-                                    break;
-                            }
-                            break;
-                    }
-                    break;*/
+                Enemy.IsDefeated = true;
+                Console.WriteLine($"{enemy.Name} byl porazen");
+                break;
             }
 
-            if (enemy.Hp <= 0)
+            enemy.Attack(player);
+
+            if (!player.IsLiving)
             {
-                Console.Write("vyhravas");
+                Console.WriteLine("umrel si gg");
+                break;
             }
-            else if (player.Hp <= 0)
-            {
-                Console.Write($"{enemy.Name} te zmlatil");
-            }
-            
         }
-        Console.ReadLine();
+
+        if (!enemy.IsLiving)
+        {
+            Console.WriteLine("Vyhrál jsi souboj!");
+            Explore(player);
+        }
+        else if (!player.IsLiving)
+        {
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.WriteLine("**********" + "\n" + " GAME OVER " + "\n" + "**********" + "\n");
+            Console.ForegroundColor = ConsoleColor.White;
+        }
     }
 }

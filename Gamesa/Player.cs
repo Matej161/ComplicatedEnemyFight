@@ -6,33 +6,36 @@ public class Player
 {
     internal double BaseDmg;
     internal double Hp;
-    internal bool IsLiving = true;
+    internal bool IsLiving => Hp > 0;
     public Room CurrentRoom { get; set; }
+    
+    public Inventory PlayerInventory { get; private set; }
 
     public void Attack(Enemy target)
     {
+        if (!IsLiving) return;
+        target.Hp -= this.BaseDmg;
+        Console.WriteLine("utocis na bluda a davas mu za " + BaseDmg + " a ted ma " + target.Hp + " zivotu");
+        
         if (this.Hp <= 0)
         {
             this.Hp = 0;
-            IsLiving = false;
         }
         
-        target.Hp -= this.BaseDmg;
-        Console.WriteLine("utocis na bluda a davas mu za " + BaseDmg + " a ted ma " + target.Hp + " zivotu");
     }
 
-    public Player(double baseDmg, double hp, bool isLiving)
+    public Player(double baseDmg, double hp)
     {
         BaseDmg = baseDmg;
         Hp = hp;
-        IsLiving = isLiving;
+        PlayerInventory = new Inventory();
     }
 
     public static class Factory
     {
         public static Player CreatePlayer()
         {
-            return new Player(2, 10, true);
+            return new Player(1, 10);
         }
     }
 

@@ -8,7 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51bda108-6729-407a-a5ca-32a08236975e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Gamesa/Inventory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Gamesa/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gamesa/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gamesa/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gamesa/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gamesa/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gamesa/Room.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/Room.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gamesa/bin/Debug/net8.0/Gamesa.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/bin/Debug/net8.0/Gamesa.dll" afterDir="false" />
@@ -16,12 +19,23 @@
       <change beforePath="$PROJECT_DIR$/Gamesa/bin/Debug/net8.0/Gamesa.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/bin/Debug/net8.0/Gamesa.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/Gamesa.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/Gamesa.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/Gamesa.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/Gamesa.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/Gamesa.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/Gamesa.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/Gamesa.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/Gamesa.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/Gamesa.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/Gamesa.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/Gamesa.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/Gamesa.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/Gamesa.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/Gamesa.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/Gamesa.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/Gamesa.genruntimeconfig.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/Gamesa.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/Gamesa.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/ref/Gamesa.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/ref/Gamesa.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/refint/Gamesa.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/refint/Gamesa.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gamesa/obj/Gamesa.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/obj/Gamesa.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gamesa/obj/Gamesa.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/obj/Gamesa.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gamesa/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gamesa/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gamesa/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gamesa/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gamesa/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,14 +54,15 @@
     &quot;assignee&quot;: &quot;Matej161&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Matej161/ComplicatedEnemyFight.git&quot;,
-    &quot;accountId&quot;: &quot;8c812b99-6f69-478e-9b82-c8f9ae91dba8&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Matej161/ComplicatedEnemyFight.git",
+    "accountId": "0b22ff70-662c-457d-ba0e-d67ba7de23fa"
   }
-}</component>
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Gamesa/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Gamesa/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -62,20 +77,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Project.Gamesa.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;CodeLensConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Project.Gamesa.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Gamesa" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Gamesa/bin/Debug/net8.0/Gamesa.exe" />
@@ -108,6 +123,7 @@
       <workItem from="1728838725855" duration="5028000" />
       <workItem from="1728850505306" duration="129000" />
       <workItem from="1728850648730" duration="924000" />
+      <workItem from="1728913236051" duration="19819000" />
     </task>
     <servers />
   </component>

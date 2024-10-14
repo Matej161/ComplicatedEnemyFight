@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Gamesa")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d4e9835d0eb8cddd32df3494142642f42a8c47e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f84bb896696d9edc023ae264bde3561d6e1ccfb7")]
 [assembly: System.Reflection.AssemblyProductAttribute("Gamesa")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Gamesa")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
