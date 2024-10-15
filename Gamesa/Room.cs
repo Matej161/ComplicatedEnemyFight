@@ -89,7 +89,7 @@ public class Room
                 break;
             
             case 5:
-                Explore(player);
+                
                 break;
         }
 
@@ -106,6 +106,7 @@ public class Room
             {
                 Enemy.IsDefeated = true;
                 Console.WriteLine($"{enemy.Name} byl porazen");
+                
                 break;
             }
 
@@ -121,6 +122,13 @@ public class Room
         if (!enemy.IsLiving)
         {
             Console.WriteLine("Vyhrál jsi souboj!");
+            Console.WriteLine("Chceš vzít zbraň z bluda? (1 = ano, 2 = ne)");
+            int takeWeapon = Convert.ToInt32(Console.ReadLine());
+
+            if (takeWeapon == 1)
+            {
+                player.EquipWeapon(enemy.DroppedWeapon);
+            }
             Explore(player);
         }
         else if (!player.IsLiving)

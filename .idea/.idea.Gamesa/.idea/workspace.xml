@@ -8,9 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51bda108-6729-407a-a5ca-32a08236975e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Gamesa/Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Gamesa/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gamesa/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Gamesa/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gamesa/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gamesa/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gamesa/Items.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/Items.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gamesa/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gamesa/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gamesa/Room.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/Room.cs" afterDir="false" />
@@ -54,12 +54,12 @@
     &quot;assignee&quot;: &quot;Matej161&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Matej161/ComplicatedEnemyFight.git",
-    "accountId": "0b22ff70-662c-457d-ba0e-d67ba7de23fa"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Matej161/ComplicatedEnemyFight.git&quot;,
+    &quot;accountId&quot;: &quot;0b22ff70-662c-457d-ba0e-d67ba7de23fa&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Gamesa/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Gamesa/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
@@ -77,20 +77,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.Gamesa.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.Gamesa.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Gamesa" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Gamesa/bin/Debug/net8.0/Gamesa.exe" />
@@ -124,6 +124,7 @@
       <workItem from="1728850505306" duration="129000" />
       <workItem from="1728850648730" duration="924000" />
       <workItem from="1728913236051" duration="19819000" />
+      <workItem from="1728990470716" duration="1292000" />
     </task>
     <servers />
   </component>
@@ -133,7 +134,6 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
-    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
 </project>

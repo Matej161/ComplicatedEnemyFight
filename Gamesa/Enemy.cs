@@ -5,6 +5,7 @@ public class Enemy
     public double BaseDmg;
     public double Hp;
     public bool IsLiving => Hp > 0;
+    public Weapon DroppedWeapon { get; private set; }
     public bool IsDefeated { get; set; }
 
     public void Attack(Player target)
@@ -19,24 +20,38 @@ public class Enemy
             IsDefeated = true;
         }
     }
+    private Weapon GenerateWeapon()
+    {
+        Random rnd = new Random();
+        int randomWeapon = rnd.Next(0, 3); 
+
+        switch (randomWeapon)
+        {
+            case 0: return new Weapon("Sword", 12);
+            case 1: return new Weapon("Axe", 10);
+            case 2: return new Weapon("Dagger", 7);
+            default: return new Weapon("Fists", 1); 
+        }
+    }
     public Enemy(string name, double baseDmg, double hp)
     {
         this.Name = name;
         this.BaseDmg = baseDmg;
         this.Hp = hp;
         IsDefeated = false;
+        DroppedWeapon = GenerateWeapon();
     }
 
     public static class Factory
     {
         public static Enemy CreateOger()
         {
-            return new Enemy("Oger", 2, 10);
+            return new Enemy("Oger", 1, 1);
         }
 
         public static Enemy CreateGoblin()
         {
-            return new Enemy("Goblin", 3, 10);
+            return new Enemy("Goblin", 1, 1);
         }
     }
 }

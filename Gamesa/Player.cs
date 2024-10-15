@@ -4,16 +4,18 @@ namespace Gamesa;
 
 public class Player
 {
-    internal double BaseDmg;
+    internal int BaseDmg;
     internal double Hp;
     internal bool IsLiving => Hp > 0;
     public Room CurrentRoom { get; set; }
+    public Weapon EquippedWeapon { get; private set; }
     
     public Inventory PlayerInventory { get; private set; }
 
     public void Attack(Enemy target)
     {
         if (!IsLiving) return;
+        int damage = EquippedWeapon != null ? EquippedWeapon.Damage : BaseDmg;
         target.Hp -= this.BaseDmg;
         Console.WriteLine("utocis na bluda a davas mu za " + BaseDmg + " a ted ma " + target.Hp + " zivotu");
         
@@ -24,13 +26,19 @@ public class Player
         
     }
 
-    public Player(double baseDmg, double hp)
+    public Player(int baseDmg, double hp)
     {
         BaseDmg = baseDmg;
         Hp = hp;
         PlayerInventory = new Inventory();
+        EquippedWeapon = new Weapon("Fists", BaseDmg);
     }
-
+    public void EquipWeapon(Weapon weapon)
+    {
+        EquippedWeapon = weapon;
+        Console.WriteLine($"You have equipped {weapon.Name}, damage: {weapon.Damage}");
+    }
+    
     public static class Factory
     {
         public static Player CreatePlayer()
@@ -46,11 +54,11 @@ public class Player
         medkit
     }
 
-    public enum EStrengthPotions
+    public enum EWeapons
     {
-        small,
-        medium,
-        large
+        knife,
+        axe,
+        sword
     }
 
     public void Heal(EHealPotions healPotions)
@@ -69,17 +77,17 @@ public class Player
         }
     }
 
-    public void IncreaseDamage(EStrengthPotions strengthPotions)
+    public void Weapons(EWeapons Weapons)
     {
-        switch (strengthPotions)
+        switch (Weapons)
         {
-            case EStrengthPotions.small:
+            case EWeapons.knife:
                 BaseDmg += 1;
                 break;
-            case EStrengthPotions.medium:
+            case EWeapons.axe:
                 BaseDmg += 3;
                 break;
-            case EStrengthPotions.large:
+            case EWeapons.sword:
                 BaseDmg += 5;
                 break;
         }

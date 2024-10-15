@@ -2,7 +2,7 @@
 
 public class Items
 {
-    public void Chest()
+    public void EnemyDrop()
     {
         Random randomThing = new Random();
         

@@ -15,8 +15,9 @@ public class Program
         
         Room room1 = new Room("bohate", true, false);
         Room room2 = new Room("prdel", true, false);
+        Room spawnRoom = new Room("spawn", true, false);
         
-        bob.CurrentRoom = room1;
+        bob.CurrentRoom = spawnRoom;
 
         /*Console.ForegroundColor = ConsoleColor.DarkRed;
         Console.WriteLine("********************" + "\n" + " FUCKIN ELDEN RING " + "\n" + "********************" + "\n");
