@@ -5,51 +5,28 @@ namespace Gamesa;
 
 public class Program
 {
+    public List<Room> Rooms { get; private set; }
     public static void Main(string[] args)
     {
-        Enemy oger = Enemy.Factory.CreateOger();
-        Enemy goblin = Enemy.Factory.CreateGoblin();
-        Player bob = Player.Factory.CreatePlayer();
-        
-        Random randomEnemy = new Random();
-        
-        Room room1 = new Room("bohate", true, false);
-        Room room2 = new Room("prdel", true, false);
-        Room spawnRoom = new Room("spawn", true, false);
-        
-        bob.CurrentRoom = spawnRoom;
-
-        /*Console.ForegroundColor = ConsoleColor.DarkRed;
-        Console.WriteLine("********************" + "\n" + " FUCKIN ELDEN RING " + "\n" + "********************" + "\n");
+        Console.ForegroundColor = ConsoleColor.DarkRed;
+        Console.WriteLine(" DOBRÝ DEN\nJÁ VÁS VÍTÁM");
         Console.ForegroundColor = ConsoleColor.White;
-        
+        Console.WriteLine();
+        Console.WriteLine("Zmáčkni enter ...");
         Console.ReadLine();
-
-        Console.WriteLine("+-------+     +-------+     +-------+\n|       |     |       |     |       |\n| Start |-----| Díra  |-----| Mekáč |\n|       |     |       |     |       |\n+-------+     +-------+     +-------+\n     |                         |\n     |                         |\n+-------+                 +-------+\n|       |                 |       |\n| SPSMB |                 | Hajzl |\n|       |                 |       |\n+-------+                 +-------+\n");
+        Console.Clear();
+            
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("Vítej, odvážný hrdino! Tvá cesta začíná v nekde TADY, čeká tě mnoho nebezpečí. \nPodaří se ti porazit bosse a najít poklady, nebo padneš do temnoty?");
+        Console.WriteLine();
         
-        Console.ReadLine();
-
-        Console.WriteLine("Vítej, odvážný hrdino! Tvá cesta začíná v nekde v prdeli idk, kde čeká mnoho nebezpečí. \n Podaří se ti porazit bosse a najít poklady, nebo padneš do temnoty?");
-        */
+        Player bob = Player.Factory.CreatePlayer();
+        Rooms rooms = new Rooms();
         
-        Console.WriteLine("vstupujes do dungeonu, kam chces jit: \n1.dira 2.spsmb");
-        int num = Convert.ToInt32(Console.ReadLine());
-
-        switch (num)
+        while (bob.IsLiving)
         {
-            case 1: 
-                bob.CurrentRoom = room1;
-                room1.Yapping();
-                room1.Explore(bob);
-                break;
-            case 2: 
-                bob.CurrentRoom = room2;
-                room2.Yapping();
-                room2.Explore(bob);
-                break;
+            rooms.MainRoom(bob);
         }
-
         Console.ReadLine();
-
     }
 }

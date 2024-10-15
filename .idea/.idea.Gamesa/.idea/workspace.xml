@@ -8,12 +8,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51bda108-6729-407a-a5ca-32a08236975e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Gamesa/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gamesa/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gamesa/Entities/Enemy.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gamesa/Enums/EHealPotions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gamesa/RoomSystem/Rooms.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Gamesa/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gamesa/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gamesa/Items.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/Items.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gamesa/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gamesa.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gamesa/Enemy.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gamesa/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gamesa/Items.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gamesa/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/Entities/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gamesa/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gamesa/Room.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/Room.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gamesa/Room.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/RoomSystem/Room.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gamesa/bin/Debug/net8.0/Gamesa.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/bin/Debug/net8.0/Gamesa.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gamesa/bin/Debug/net8.0/Gamesa.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/bin/Debug/net8.0/Gamesa.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gamesa/bin/Debug/net8.0/Gamesa.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/bin/Debug/net8.0/Gamesa.pdb" afterDir="false" />
@@ -22,7 +27,6 @@
       <change beforePath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/Gamesa.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/Gamesa.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/Gamesa.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/Gamesa.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/Gamesa.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/Gamesa.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/Gamesa.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/Gamesa.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/Gamesa.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/Gamesa.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/Gamesa.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/Gamesa.genruntimeconfig.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/Gamesa.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Gamesa/obj/Debug/net8.0/Gamesa.pdb" afterDir="false" />
@@ -61,6 +65,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2a8a2211ff7b6ce5ab05b41d416904ec475a643fb8cbb2261f85a750b13217/Console.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Gamesa/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Gamesa/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -77,20 +82,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Project.Gamesa.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Project.Gamesa.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Gamesa" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Gamesa/bin/Debug/net8.0/Gamesa.exe" />
@@ -125,6 +130,7 @@
       <workItem from="1728850648730" duration="924000" />
       <workItem from="1728913236051" duration="19819000" />
       <workItem from="1728990470716" duration="1292000" />
+      <workItem from="1729002869753" duration="21553000" />
     </task>
     <servers />
   </component>

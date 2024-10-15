@@ -12,18 +12,18 @@ public class Inventory
     public void AddPotion(Player.EHealPotions potion)
     {
         potions.Add(potion);
-        Console.WriteLine($"{potion} byla přidána do inventáře.");
+        Console.WriteLine($"+ 1 {potion}");
     }
 
     public void UsePotion(Player player)
     {
         if (potions.Count == 0)
         {
-            Console.WriteLine("Nemáš žádné lektvary v inventáři.");
+            Console.WriteLine("Nemáš žádné healy v inventáři.");
             return;
         }
 
-        Console.WriteLine("Vyber lektvar k použití:");
+        Console.WriteLine("Vyber heal k použití:");
         for (int i = 0; i < potions.Count; i++)
         {
             Console.WriteLine($"{i + 1}. {potions[i]}");
@@ -51,7 +51,7 @@ public class Inventory
             return;
         }
 
-        Console.WriteLine("Lektvary v inventáři:");
+        Console.WriteLine("Healy v inventáři:");
         foreach (var potion in potions)
         {
             Console.WriteLine(potion);

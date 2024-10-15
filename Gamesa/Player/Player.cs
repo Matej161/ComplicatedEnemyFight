@@ -2,7 +2,7 @@
 
 namespace Gamesa;
 
-public class Player
+public partial class Player
 {
     internal int BaseDmg;
     internal double Hp;
@@ -17,13 +17,11 @@ public class Player
         if (!IsLiving) return;
         int damage = EquippedWeapon != null ? EquippedWeapon.Damage : BaseDmg;
         target.Hp -= this.BaseDmg;
-        Console.WriteLine("utocis na bluda a davas mu za " + BaseDmg + " a ted ma " + target.Hp + " zivotu");
-        
-        if (this.Hp <= 0)
+        if (target.Hp <= 0)
         {
-            this.Hp = 0;
+            target.Hp = 0;
         }
-        
+        Console.WriteLine($"útočíš na {target.Name} a dáváš mu za " + BaseDmg + " damage a teď má " + target.Hp + " životů.");
     }
 
     public Player(int baseDmg, double hp)
@@ -36,59 +34,38 @@ public class Player
     public void EquipWeapon(Weapon weapon)
     {
         EquippedWeapon = weapon;
-        Console.WriteLine($"You have equipped {weapon.Name}, damage: {weapon.Damage}");
+        BaseDmg = weapon.Damage;
+        Console.WriteLine($"Používáš {weapon.Name}, damage: {weapon.Damage}");
+    }
+
+    public void ShowStats(Player player)
+    {
+        Console.WriteLine($"Hp: {player.Hp}");
+        Console.WriteLine($"Damage: {player.BaseDmg}");
+        Console.WriteLine($"Zbraň: {player.EquippedWeapon.Name}");
+        Console.WriteLine();
     }
     
     public static class Factory
     {
         public static Player CreatePlayer()
         {
-            return new Player(1, 10);
+            return new Player(5, 10);
         }
-    }
-
-    public enum EHealPotions
-    {
-        naplast,
-        bandaz,
-        medkit
-    }
-
-    public enum EWeapons
-    {
-        knife,
-        axe,
-        sword
     }
 
     public void Heal(EHealPotions healPotions)
     {
         switch (healPotions)
         {
-            case EHealPotions.naplast:
+            case EHealPotions.náplast:
                 Hp += 7;
                 break;
-            case EHealPotions.bandaz:
+            case EHealPotions.bandáž:
                 Hp += 10;
                 break;
             case EHealPotions.medkit:
                 Hp += 15;
-                break;
-        }
-    }
-
-    public void Weapons(EWeapons Weapons)
-    {
-        switch (Weapons)
-        {
-            case EWeapons.knife:
-                BaseDmg += 1;
-                break;
-            case EWeapons.axe:
-                BaseDmg += 3;
-                break;
-            case EWeapons.sword:
-                BaseDmg += 5;
                 break;
         }
     }
